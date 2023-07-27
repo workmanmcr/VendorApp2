@@ -8,44 +8,44 @@ namespace VendorApp.Controllers
 
   public class VendorController : Controller
   {
-    [HttpGet("/vendor")]
+    [HttpGet("/Vendor")]
     public ActionResult Index()
     {
       List<Vendor> vendors = Vendor.GetAll();
       return View(vendors);
     }
-    [HttpPost("/vendor")]
+    [HttpPost("/Vendor")]
     public ActionResult Create(string name, string description)
     {
       new Vendor(name, description);
       List<Vendor> vendors = Vendor.GetAll();
       return RedirectToAction("Index", vendors);
     }
-    [HttpGet("/vendor/new")]
+    [HttpGet("/Vendor/new")]
     public ActionResult New()
     {
       return View();
     }
-    [HttpGet("/vendor/{id}")]
+    [HttpGet("/Vendor/{id}")]
     public ActionResult Details(int id)
     {
       Vendor vendor = Vendor.GetVendorWithId(id);
       return View(vendor);
     }
-    [HttpGet("/vendor/{id}/order/new")]
+    [HttpGet("/Vendor/{id}/Order/New")]
     public ActionResult newOrder(int id)
     {
       Vendor vendor = Vendor.GetVendorWithId(id);
       return View(vendor);
     }
-    [HttpPost("/vendor/{id}/order/new")]
+    [HttpPost("/Vendor/{id}/Order/New")]
     public ActionResult CreateOrder(string title, string description, int price, DateTime orderDate, int vendorId)
     {
       Vendor vendor = Vendor.GetVendorWithId(vendorId);
       vendor.AddOrder(new Order(title, description, price, vendor.GetOrderCount(), vendor.Name, orderDate, vendor.Id));
       return RedirectToAction("Details");
     }
-    [HttpGet("/vendor/{id}/order/{oid}")]
+    [HttpGet("/Vendor/{id}/Order/{oid}")]
     public ActionResult ShowOrder(int id, int oid)
     {
       Vendor vendor = Vendor.GetVendorWithId(id);
@@ -54,13 +54,13 @@ namespace VendorApp.Controllers
     }
    
 
-    [HttpGet("/vendor/search")]
+    [HttpGet("/Vendor/Search")]
     public ActionResult Search()
     {
 
       return View();
     }
-    [HttpPost("/vendor/search")]
+    [HttpPost("/Vendor/Search")]
     public ActionResult SearchVendor(string vendor)
     {
       Vendor vendor1 = Vendor.SearchVendor(vendor);
