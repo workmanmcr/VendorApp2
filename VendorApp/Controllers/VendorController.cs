@@ -21,7 +21,7 @@ namespace VendorApp.Controllers
       List<Vendor> vendors = Vendor.GetAll();
       return RedirectToAction("Index", vendors);
     }
-    [HttpGet("/Vendor/new")]
+    [HttpGet("/Vendor/New")]
     public ActionResult New()
     {
       return View();
@@ -43,7 +43,7 @@ namespace VendorApp.Controllers
     {
       Vendor vendor = Vendor.GetVendorWithId(vendorId);
       vendor.AddOrder(new Order(title, description, price, vendor.GetOrderCount(), vendor.Name, orderDate, vendor.Id));
-      return RedirectToAction("Details");
+      return RedirectToAction("Index");
     }
     [HttpGet("/Vendor/{id}/Order/{oid}")]
     public ActionResult ShowOrder(int id, int oid)
@@ -52,7 +52,7 @@ namespace VendorApp.Controllers
       Order order = vendor.GetOrderWithId(oid);
       return View(order);
     }
-   
+
 
     [HttpGet("/Vendor/Search")]
     public ActionResult Search()
@@ -64,7 +64,7 @@ namespace VendorApp.Controllers
     public ActionResult SearchVendor(string vendor)
     {
       Vendor vendor1 = Vendor.SearchVendor(vendor);
-      
+
       return View("Details", vendor1);
     }
 

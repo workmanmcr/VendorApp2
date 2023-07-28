@@ -4,7 +4,7 @@ By: Mike Workman
 
 Vendors R' Us is an application for stting up a vendor acount to order what you need to run your business.
 
-View on [Github Pages](https://https://workmanmcr.github.io/VendorApp.Solution/)
+View on [Github Pages](https://https://workmanmcr.github.io/VendorApp2.Solution/)
 
 ## **Technologies Used**
 
@@ -22,23 +22,26 @@ The vendors page contains a link to a page presenting the customer with a form t
 The customer is be able to click a Vendor's name and go to a new page that will display all of that Vendor's orders.
 the customer is provided with a link to a page presenting the, with a form to create a new Order for a particular Vendor.
 ## **Complete Setup**
+ 
 
-- Navigate to main page of repo
-- copy link from repo
-- clone repo 
+1. Navigate to main page of repo.
+2. Copy link from repo.
+3. Clone this repo.
+4. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "VendorApp2.solution".
+5. Once the VenderApp2.solution has been selected type "code ." to open VS Code.
+6. Click"terminal" in the top leff of the window.
+7. Select "new temrinal" from the drop down menu.
+8. Navigate to "VendorApp" in the temrinal.
+9. In the temrinal type the command "dotnet watch run".
+
 
 ## **Known Bugs**
 no known bugs at this time
 
-### **Local Setup**
-1. Clone this repo.
-2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "ShapeTracker".
-3. In the command line, run the command "dotnet run" to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
-4. Optionally, you can run "dotnet build" to compile this console app without running it.
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [2023] [Micheal Workman]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
