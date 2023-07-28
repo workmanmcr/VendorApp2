@@ -36,7 +36,8 @@ the customer is provided with a link to a page presenting the, with a form to cr
 
 
 ## **Known Bugs**
-no known bugs at this time
+add order function only puts new orders under first Vendor created.
+all orders show up under 1 vendor.
 
 
 MIT License
